@@ -1,0 +1,20 @@
+<div data-controller="modal">
+  <div
+    data-modal-target="modal"
+    class="modal-overlay">
+    <div class="overlay" data-action="click->modal#closeModal"></div>
+    <div class="modal">
+      <div class="modal-header">
+        <h1 class="text-2xl"><%= title %></h1>
+      </div>
+
+      <div class="modal-content">
+        <%= yield %>
+      </div>
+
+      <div class="flex justify-end">
+        <button data-action="modal#closeModal" class="btn w-fit">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
